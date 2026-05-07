@@ -102,7 +102,7 @@ function mousePressed() {
 function autoLaunch() {
   for (let i = 0; i < letters.length; i++) {
     let angle = random(360);
-    let speed = random(15, 25);       // much faster
+    let speed = random(15, 35);       // much faster
     letters[i].speedX = cos(angle) * speed;
     letters[i].speedY = sin(angle) * speed;
     letters[i].spin = random(-12, 12); // wild spinning
@@ -124,7 +124,7 @@ function keyPressed() {
       letters[i].speedY = 0;
       letters[i].spin = 0;
       letters[i].angle = 0;
-      letters[i].size = 85;
+      letters[i].size = 100;
       letters[i].hitWall = false;
       letters[i].wallHitCount = 0;
       letters[i].col = color(255);
