@@ -89,15 +89,19 @@ blendUnlocked = letters.every(l => l.hitWall);
     }
   }
 }
-
 function mousePressed() {
   if (!soundStarted) {
     soundStarted = true;
     startTime = millis();
     sound.play();
+  } else if (sound.isPlaying()) {
+    sound.stop();
+    soundStarted = false;  // reset so clicking again restarts it
+  } else {
+    sound.play();
+    soundStarted = true;
   }
 }
-
 // give every letter a random angle, fast speed, wild spin
 function autoLaunch() {
   for (let i = 0; i < letters.length; i++) {
