@@ -94,12 +94,6 @@ function mousePressed() {
     soundStarted = true;
     startTime = millis();
     sound.play();
-  } else if (sound.isPlaying()) {
-    sound.stop();
-    soundStarted = false;  // reset so clicking again restarts it
-  } else {
-    sound.play();
-    soundStarted = true;
   }
 }
 // give every letter a random angle, fast speed, wild spin
