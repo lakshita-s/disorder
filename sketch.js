@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(700, 300);
+  createCanvas(600, 600);
   angleMode(DEGREES);
 
   amplitude = new p5.Amplitude();
